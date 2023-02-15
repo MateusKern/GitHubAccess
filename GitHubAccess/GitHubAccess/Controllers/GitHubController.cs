@@ -3,11 +3,17 @@ using Octokit;
 
 namespace GitHubAccess.Controllers
 {
+    /// <summary>
+    /// GitHub
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class GitHubController : ControllerBase
     {
-
+        /// <summary>
+        /// Faz a busca de repositórios destaque de 5 linguagens 
+        /// </summary>
+        /// <returns>Uma lista de repositórios</returns>
         [HttpGet(Name = "busca-lista-repos")]
         public async Task<IActionResult> Get()
         {
