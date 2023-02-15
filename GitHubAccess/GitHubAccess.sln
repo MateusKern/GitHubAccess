@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubAccess", "GitHubAccess\GitHubAccess.csproj", "{51F586DB-7914-4425-8E82-37B5934726C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubAccess.Infra", "GitHubAccess.Infra\GitHubAccess.Infra.csproj", "{1498A438-07E3-40C3-8AC4-B140698F195A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubAccess.Dominio", "GitHubAccess.Dominio\GitHubAccess.Dominio.csproj", "{73E57E65-40EE-4C29-904F-59231DB3E279}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{51F586DB-7914-4425-8E82-37B5934726C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51F586DB-7914-4425-8E82-37B5934726C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51F586DB-7914-4425-8E82-37B5934726C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1498A438-07E3-40C3-8AC4-B140698F195A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1498A438-07E3-40C3-8AC4-B140698F195A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1498A438-07E3-40C3-8AC4-B140698F195A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1498A438-07E3-40C3-8AC4-B140698F195A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73E57E65-40EE-4C29-904F-59231DB3E279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73E57E65-40EE-4C29-904F-59231DB3E279}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73E57E65-40EE-4C29-904F-59231DB3E279}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73E57E65-40EE-4C29-904F-59231DB3E279}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
