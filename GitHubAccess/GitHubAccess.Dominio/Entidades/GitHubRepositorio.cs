@@ -2,148 +2,84 @@
 {
     public class GitHubRepositorio
     {
-        public GitHubRepositorio(string url, string htmlUrl, string cloneUrl, string gitUrl, string sshUrl, string svnUrl, string mirrorUrl, long id, string nodeId, /*GitHubRepositorioUsuario owner,*/ string name, string fullName,
-                                 bool isTemplate, string description, string homepage, string language, bool @private, bool fork, int forksCount, int stargazersCount, string defaultBranch, int openIssuesCount,
-                                 DateTimeOffset? pushedAt, DateTimeOffset createdAt, DateTimeOffset updatedAt, /*GitHubRepositorioPermissoes permissions,*/ GitHubRepositorio parent, GitHubRepositorio source,
-                                 GitHubRepositorioLicencaMetadado license, bool hasIssues, bool hasWiki, bool hasDownloads, bool hasPages, int subscribersCount, long size, bool? allowRebaseMerge, bool? allowSquashMerge,
-                                 bool? allowMergeCommit, bool archived, int watchersCount, bool? deleteBranchOnMerge, GitHubRepositorioVisibilidade visibility, IEnumerable<string> topics, bool? allowAutoMerge,
-                                 bool? allowUpdateBranch)
-        {
-            Url = url;
-            HtmlUrl = htmlUrl;
-            CloneUrl = cloneUrl;
-            GitUrl = gitUrl;
-            SshUrl = sshUrl;
-            SvnUrl = svnUrl;
-            MirrorUrl = mirrorUrl;
-            Id = id;
-            NodeId = nodeId;
-            //Owner = owner;
-            Name = name;
-            FullName = fullName;
-            IsTemplate = isTemplate;
-            Description = description;
-            Homepage = homepage;
-            Language = language;
-            Private = @private;
-            Fork = fork;
-            ForksCount = forksCount;
-            StargazersCount = stargazersCount;
-            DefaultBranch = defaultBranch;
-            OpenIssuesCount = openIssuesCount;
-            PushedAt = pushedAt;
-            CreatedAt = createdAt;
-            UpdatedAt = updatedAt;
-            //Permissions = permissions;
-            Parent = parent;
-            Source = source;
-            License = license;
-            HasIssues = hasIssues;
-            HasWiki = hasWiki;
-            HasDownloads = hasDownloads;
-            HasPages = hasPages;
-            SubscribersCount = subscribersCount;
-            Size = size;
-            AllowRebaseMerge = allowRebaseMerge;
-            AllowSquashMerge = allowSquashMerge;
-            AllowMergeCommit = allowMergeCommit;
-            Archived = archived;
-            WatchersCount = watchersCount;
-            Topics = topics.ToList();
-            DeleteBranchOnMerge = deleteBranchOnMerge;
-            Visibility = visibility;
-            AllowAutoMerge = allowAutoMerge;
-            AllowUpdateBranch = allowUpdateBranch;
-        }
+        public int BdId { get; set; }
 
-        public string Url { get; private set; }
+        public string? Url { get;  set; }
 
-        public string HtmlUrl { get; private set; }
+        public string? HtmlUrl { get;  set; }
 
-        public string CloneUrl { get; private set; }
+        public string? CloneUrl { get;  set; }
 
-        public string GitUrl { get; private set; }
+        public string? GitUrl { get;  set; }
 
-        public string SshUrl { get; private set; }
+        public string? SshUrl { get;  set; }
 
-        public string SvnUrl { get; private set; }
+        public string? SvnUrl { get;  set; }
 
-        public string MirrorUrl { get; private set; }
+        public string? MirrorUrl { get;  set; }
 
-        public long Id { get; private set; }
+        public long Id { get;  set; }
 
-        public string NodeId { get; private set; }
+        public string? NodeId { get;  set; }
 
-        //public GitHubRepositorioUsuario Owner { get; private set; }
+        public string? Name { get;  set; }
 
-        public string Name { get; private set; }
+        public string? FullName { get;  set; }
 
-        public string FullName { get; private set; }
+        public bool IsTemplate { get;  set; }
 
-        public bool IsTemplate { get; private set; }
+        public string? Description { get;  set; }
 
-        public string Description { get; private set; }
+        public string? Homepage { get;  set; }
 
-        public string Homepage { get; private set; }
+        public string? Language { get;  set; }
 
-        public string Language { get; private set; }
+        public bool Private { get;  set; }
 
-        public bool Private { get; private set; }
+        public bool Fork { get;  set; }
 
-        public bool Fork { get; private set; }
+        public int ForksCount { get;  set; }
 
-        public int ForksCount { get; private set; }
+        public int StargazersCount { get;  set; }
 
-        public int StargazersCount { get; private set; }
+        public int WatchersCount { get;  set; }
 
-        public int WatchersCount { get; private set; }
+        public string? DefaultBranch { get;  set; }
 
-        public string DefaultBranch { get; private set; }
+        public int OpenIssuesCount { get;  set; }
 
-        public int OpenIssuesCount { get; private set; }
+        public DateTimeOffset? PushedAt { get;  set; }
 
-        public DateTimeOffset? PushedAt { get; private set; }
+        public DateTimeOffset CreatedAt { get;  set; }
 
-        public DateTimeOffset CreatedAt { get; private set; }
+        public DateTimeOffset UpdatedAt { get;  set; }
 
-        public DateTimeOffset UpdatedAt { get; private set; }
+        public bool HasIssues { get;  set; }
 
-        //public GitHubRepositorioPermissoes Permissions { get; private set; }
+        public bool HasWiki { get;  set; }
 
-        public GitHubRepositorio Parent { get; private set; }
+        public bool HasDownloads { get;  set; }
 
-        public GitHubRepositorio Source { get; private set; }
+        public bool? AllowRebaseMerge { get;  set; }
 
-        public GitHubRepositorioLicencaMetadado License { get; private set; }
+        public bool? AllowSquashMerge { get;  set; }
 
-        public bool HasIssues { get; private set; }
+        public bool? AllowMergeCommit { get;  set; }
 
-        public bool HasWiki { get; private set; }
+        public bool HasPages { get;  set; }
 
-        public bool HasDownloads { get; private set; }
+        public int SubscribersCount { get;  set; }
 
-        public bool? AllowRebaseMerge { get; private set; }
+        public long Size { get;  set; }
 
-        public bool? AllowSquashMerge { get; private set; }
+        public bool Archived { get;  set; }
 
-        public bool? AllowMergeCommit { get; private set; }
+        public IReadOnlyList<string> Topics { get;  set; }
 
-        public bool HasPages { get; private set; }
+        public bool? DeleteBranchOnMerge { get;  set; }
 
-        public int SubscribersCount { get; private set; }
+        public bool? AllowAutoMerge { get;  set; }
 
-        public long Size { get; private set; }
-
-        public bool Archived { get; private set; }
-
-        public IReadOnlyList<string> Topics { get; private set; }
-
-        public bool? DeleteBranchOnMerge { get; private set; }
-
-        public GitHubRepositorioVisibilidade? Visibility { get; private set; }
-
-        public bool? AllowAutoMerge { get; private set; }
-
-        public bool? AllowUpdateBranch { get; private set; }
+        public bool? AllowUpdateBranch { get;  set; }
     }
 }
