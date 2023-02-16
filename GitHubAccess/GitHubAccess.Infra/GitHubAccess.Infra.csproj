@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GitHubAccess.Dominio\GitHubAccess.Dominio.csproj" />
+  </ItemGroup>
+
 </Project>

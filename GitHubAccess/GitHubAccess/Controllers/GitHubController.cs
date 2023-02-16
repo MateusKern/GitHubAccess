@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Octokit;
+﻿using GitHubAccess.Dominio.Comandos;
+using GitHubAccess.Dominio.Manipuladores;
+using Microsoft.AspNetCore.Mvc;
 
 namespace GitHubAccess.Controllers
 {
@@ -10,38 +11,19 @@ namespace GitHubAccess.Controllers
     [ApiController]
     public class GitHubController : ControllerBase
     {
+        private readonly GitHubManipulador _gitHubManipulador;
+
+        public GitHubController(GitHubManipulador gitHubManipulador)
+        {
+            _gitHubManipulador = gitHubManipulador;
+        }
+
         /// <summary>
         /// Faz a busca de repositórios destaque de 5 linguagens 
         /// </summary>
         /// <returns>Uma lista de repositórios</returns>
         [HttpGet(Name = "busca-lista-repos")]
-        public async Task<IActionResult> Get()
-        {
-            List<Repository> repositorios = new List<Repository>();
-
-            repositorios.Add(await BuscaRepositorioGitHub(Language.CSharp));
-            repositorios.Add(await BuscaRepositorioGitHub(Language.Python));
-            repositorios.Add(await BuscaRepositorioGitHub(Language.JavaScript));
-            repositorios.Add(await BuscaRepositorioGitHub(Language.Java));
-            repositorios.Add(await BuscaRepositorioGitHub(Language.Css));
-
-            return Ok(repositorios);
-        }
-
-        private async Task<Repository> BuscaRepositorioGitHub(Language language)
-        {
-            var githubClient = new GitHubClient(new ProductHeaderValue("GitHubAccess"));
-
-            var request = new SearchRepositoriesRequest
-            {
-                Language = language,
-                SortField = RepoSearchSort.Stars,
-                Order = SortDirection.Descending,
-                PerPage = 1,
-                Page = 1
-            };
-
-            return (await githubClient.Search.SearchRepo(request)).Items[0];
-        }
+        public async Task<IActionResult> Get() =>
+            Ok(await _gitHubManipulador.ManipularAsync(new BuscarRepositoriosComando()));
     }
 }
