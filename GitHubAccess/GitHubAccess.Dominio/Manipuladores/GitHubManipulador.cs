@@ -1,12 +1,19 @@
 ﻿using GitHubAccess.Base;
 using GitHubAccess.Dominio.Comandos;
+using GitHubAccess.Dominio.Interfaces;
 using GitHubAccess.Dominio.Resultados;
-using Octokit;
 
 namespace GitHubAccess.Dominio.Manipuladores
 {
     public class GitHubManipulador : IManipulador<BuscarRepositoriosComando>
     {
+        private readonly IGitHubServico _gitHubServico;
+
+        public GitHubManipulador(IGitHubServico gitHubServico)
+        {
+            _gitHubServico = gitHubServico;
+        }
+
         public async Task<Resultado> ManipularAsync(BuscarRepositoriosComando comando)
         {
             BuscarRepositoriosResultado resultado = new();
@@ -18,29 +25,9 @@ namespace GitHubAccess.Dominio.Manipuladores
                 return resultado;
             }
 
-            resultado.Repositorios.Add(await BuscaRepositorioGitHub(Language.CSharp));
-            resultado.Repositorios.Add(await BuscaRepositorioGitHub(Language.Python));
-            resultado.Repositorios.Add(await BuscaRepositorioGitHub(Language.JavaScript));
-            resultado.Repositorios.Add(await BuscaRepositorioGitHub(Language.Java));
-            resultado.Repositorios.Add(await BuscaRepositorioGitHub(Language.Css));
+            resultado.Repositorios.AddRange(await _gitHubServico.BuscarRepositorios());
 
             return resultado;
-        }
-
-        private async Task<Repository> BuscaRepositorioGitHub(Language language)
-        {
-            var githubClient = new GitHubClient(new ProductHeaderValue("GitHubAccess"));
-
-            var request = new SearchRepositoriesRequest
-            {
-                Language = language,
-                SortField = RepoSearchSort.Stars,
-                Order = SortDirection.Descending,
-                PerPage = 1,
-                Page = 1
-            };
-
-            return (await githubClient.Search.SearchRepo(request)).Items[0];
         }
     }
 }

@@ -1,4 +1,7 @@
+using GitHubAccess.Dominio.Interfaces;
 using GitHubAccess.Dominio.Manipuladores;
+using GitHubAccess.Infra.Mapeamento;
+using GitHubAccess.Infra.Servicos;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +13,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<GitHubManipulador>();
+builder.Services.AddScoped<IGitHubServico, GitHubServico>();
+builder.Services.AddAutoMapper(typeof(Mapeamento).Assembly);
 
 var app = builder.Build();
 

@@ -1,5 +1,5 @@
 ﻿using GitHubAccess.Base;
-using Octokit;
+using GitHubAccess.Dominio.Entidades;
 
 namespace GitHubAccess.Dominio.Resultados
 {
@@ -10,6 +10,6 @@ namespace GitHubAccess.Dominio.Resultados
             Repositorios = new();
         }
 
-        public List<Repository> Repositorios { get; set; }
+        public List<GitHubRepositorio> Repositorios { get; set; }
     }
 }
