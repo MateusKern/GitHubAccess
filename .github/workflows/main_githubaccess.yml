@@ -34,7 +34,7 @@ jobs:
         run: dotnet publish -c Release /p:PublishDir=${{env.DOTNET_ROOT}}/myapp
         
       - name: Generate scripts
-        run: dotnet ef migrations script --output ${{env.DOTNET_ROOT}}/sql/migration-script.sql --idempotent --project PetShop.API
+        run: dotnet ef migrations script --output ${{env.DOTNET_ROOT}}/sql/migration-script.sql --idempotent --project GitHubAccess
 
       - name: Azure SQL Deploy
         uses: Azure/sql-action@v1.3
