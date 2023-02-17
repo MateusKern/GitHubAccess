@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubAccess", "GitHubAccess\GitHubAccess.csproj", "{51F586DB-7914-4425-8E82-37B5934726C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHubAccess", "GitHubAccess\GitHubAccess.csproj", "{51F586DB-7914-4425-8E82-37B5934726C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubAccess.Infra", "GitHubAccess.Infra\GitHubAccess.Infra.csproj", "{1498A438-07E3-40C3-8AC4-B140698F195A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHubAccess.Infra", "GitHubAccess.Infra\GitHubAccess.Infra.csproj", "{1498A438-07E3-40C3-8AC4-B140698F195A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubAccess.Dominio", "GitHubAccess.Dominio\GitHubAccess.Dominio.csproj", "{73E57E65-40EE-4C29-904F-59231DB3E279}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHubAccess.Dominio", "GitHubAccess.Dominio\GitHubAccess.Dominio.csproj", "{73E57E65-40EE-4C29-904F-59231DB3E279}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubAccess.Base", "GitHubAccess.Base\GitHubAccess.Base.csproj", "{21FEFD52-A70D-4F5D-9B29-C9AAF0F36CCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHubAccess.Base", "GitHubAccess.Base\GitHubAccess.Base.csproj", "{21FEFD52-A70D-4F5D-9B29-C9AAF0F36CCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubAccess.Testes", "GitHubAccess.Testes\GitHubAccess.Testes.csproj", "{BE83F831-7D8B-4015-8E65-88047D1E15A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{21FEFD52-A70D-4F5D-9B29-C9AAF0F36CCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21FEFD52-A70D-4F5D-9B29-C9AAF0F36CCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21FEFD52-A70D-4F5D-9B29-C9AAF0F36CCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE83F831-7D8B-4015-8E65-88047D1E15A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE83F831-7D8B-4015-8E65-88047D1E15A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE83F831-7D8B-4015-8E65-88047D1E15A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE83F831-7D8B-4015-8E65-88047D1E15A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
