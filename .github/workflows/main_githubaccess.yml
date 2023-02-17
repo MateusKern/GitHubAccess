@@ -40,7 +40,7 @@ jobs:
         uses: Azure/sql-action@v1.3
         with:
           # Name of the Azure SQL Server name, like dotnetthoughts.database.windows.net.
-          server-name: tcp:petshop-sqlserver.database.windows.net
+          server-name: github-access-server.database.windows.net
           # The connection string, including authentication information, for the Azure SQL Server database.
           connection-string: ${{ secrets.CONNECTION_STRING }}
           # Path to SQL script file to deploy
