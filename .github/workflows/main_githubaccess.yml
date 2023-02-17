@@ -15,6 +15,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - uses: azure/login@v1
+        # Azure login required to add a temporary firewall rule
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v1
