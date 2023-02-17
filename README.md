@@ -1,7 +1,7 @@
 # GitHubAccess
-API feita em C# .NET para se conectar com a API do GitHub
+API feita em C# .NET para se conectar com a API do GitHub disponível no endereço <a href="https://githubaccess.azurewebsites.net" target="_blank">https://githubaccess.azurewebsites.net</a>
 
-# Para executar a aplicação:
+# Para executar a aplicação na sua máquina local:
 <ul>
   <li>Primeiro de tudo você deve instalar o Visual Studio em sua máquina e instalar o .NET 7 utilizando o <a href="https://visualstudio.microsoft.com/downloads/" target="_blank">[Visual Studio Installer]</a></li>
   <li>Depois você deve clonar este repositório em sua máquina</li>
